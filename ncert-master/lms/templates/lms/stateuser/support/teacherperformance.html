@@ -1,0 +1,40 @@
+{% extends 'lms/stateuser/supportandsupervision.html'%}
+{% block support%}
+Please Select categories :<br>
+
+
+<input type="checkbox" name="vehicle1" value="Bike">State
+<input type="checkbox" name="vehicle2" value="Car"> District
+<input type="checkbox" name="vehicle3" value="Boat" checked> School
+<input type="checkbox" name="vehicle3" value="Boat" checked> Class
+
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter State Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter District Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter School Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter Class Name"><br>
+
+Please Select Time Period : 
+<select>
+  <option>Weekly</option>
+  <option>15 days</option>
+  <option>Monthly</option>
+  <option>3 Months</option>
+</select>
+<br><br>
+
+Please Select Performance : 
+<select>
+  <option>latent</option>
+  <option>Emerging</option>
+  <option>Established</option>
+  <option>Advanced</option>
+</select>
+<br><br>
+
+Justification:
+<input type="text" name="">
+
+<input type="submit" name="">
+
+
+{% endblock %}

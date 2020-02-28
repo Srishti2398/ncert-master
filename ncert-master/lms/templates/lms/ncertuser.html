@@ -1,0 +1,89 @@
+{%extends 'lms/base.html'%}
+{% load static%}
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- <a class="navbar-brand" href="#"><img class = 'logo' src="{% static 'ncert/img/logo.png' %}"></a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <script
+			  src="https://code.jquery.com/jquery-3.4.0.min.js"
+			  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			  crossorigin="anonymous"></script>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      {% if user.is_authenticated%}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'ncertuser' %}">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'usermanage' %}">User Management <span class="sr-only">(current)</span></a>
+      </li>
+
+     
+     <!--  <li class="nav-item active">
+        <a class="nav-link" href="">Evidences <span class="sr-only">(current)</span></a>
+      </li> -->
+
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="">Resource Pool <span class="sr-only">(current)</span></a>
+      </li> -->
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'rmanage'%}">Resource Management <span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'lout' %}">Progress in Learning Outcome<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'sas' %}">Support and Supervison <span class="sr-only">(current)</span></a>
+      </li>
+
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'infoup'%}">Information and Update <span class="sr-only">(current)</span></a>
+      </li> -->
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+
+      {% else %}
+
+       <li class="nav-item active">
+        <a class="nav-link" href="">login<span class="sr-only">(current)</span></a>
+      </li>
+      {% endif %}
+      
+  </div>
+</nav>
+{% block ncert%}
+{% endblock %}
+
+{% if content == 'ncertuser' %}
+      <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Dashboard</h1>
+    <p class="lead">You have received Mail</p>
+    <br>
+    <button onclick="window.location.href = '{% url 'ncertinfoandupdate'%}';"> Information and Update </button>
+  </div>
+</div>
+{% endif %}
+
+
+
+{%endblock%}

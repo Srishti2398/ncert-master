@@ -1,0 +1,27 @@
+{% extends 'lms/ncertuser/resourcemanagement.html'%}
+{% load static%}
+{% block resource %}
+
+
+		
+
+<div id = "cards" class="card" style="width: 18rem;">
+    <img src="{% static 'ncert/img/logo.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Study Material</h5>
+      <p class="card-text">uploaded time: 23 March 2019 <br> uploaded by: xyz</p>
+      <a href="{% static 'ncert/img/logo.png' %}" class="btn btn-primary" download>View</a>
+      <!-- <a id = 'accept' href="#" class="btn btn-primary accept ">Accept</a> -->
+      <button class="btn btn-primary accept ">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#cards").remove();
+      });
+    });
+    </script>
+
+{% endblock resource %}

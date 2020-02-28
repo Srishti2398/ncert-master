@@ -1,0 +1,57 @@
+{% extends 'lms/stateuser/supportandsupervision.html'%}
+{% block support%}
+
+Type of Support: 
+<select>
+  <option>Training</option>
+  <option>Workshop</option>
+  <option>face to face</option>
+  <option>demonstration</option>
+  <option>collaboration</option>
+</select>
+<br><br>
+
+Schedule:<input type="date" name=""><br><br>
+
+School List:
+<select>
+	<option>School 1</option>>
+	<option>School 2</option>>
+	<option>School 1</option>>
+</select>
+
+Teacher List:
+<select>
+	<option>Teacher 1</option>
+	<option>Teacher 2</option>
+	<option>Teacher 3</option>
+	<option>Teacher 4</option>
+</select>
+<br>
+<br>
+
+<button>Add</button>
+<button>Update</button>
+<button>Delete</button>
+<!-- <button>Add Information</button> -->
+<br>
+
+<br>
+Add Information
+<select>
+	<<option value="">Document</option>
+	<<option value="">Photo</option>
+	<<option value="">Audio</option>
+	<<option value="">Video</option>
+</select>
+<br>
+<br>
+<button>Submit</button>
+
+
+<!-- <button>Browse</button>
+<button>Add</button>
+<button>Update</button>
+<button>Submit</button> -->
+
+{% endblock %}

@@ -1,0 +1,374 @@
+{%extends 'lms/base.html'%}
+{% load static%}
+{%block content%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+
+
+
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      {% if user.is_authenticated%}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'teacheruser'%}">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'activityP' %}">Activity Plan <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Student Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'uploadEvi' %}">Upload Evidences <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Progress Report <span class="sr-only">(current)</span></a>
+      </li>
+
+       <li class="nav-item active">
+        <a class="nav-link" href="">View Content and Resource <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+      {% else %}
+
+       <li class="nav-item active">
+        <a class="nav-link" href="">login<span class="sr-only">(current)</span></a>
+      </li>
+      {% endif %}
+      
+  </div>
+
+
+</nav>
+
+
+<script src="{% static 'ncert/myjs/teacherjs.js' %}"></script>  
+<div class="container">
+
+ <!--  <div class="jumbotron">
+    <h1 class="display-4">Learning Management System</h1>
+    <p class="lead">NCERT has been conducting the National Achievement Survey (NAS) since 2001. This is the Largest Achievement survey conducted in the country and is amongst the largest conducted in the world. It is being implemented to assess the competency based Learning Outcomes of students at different stages of education.</p>
+    <hr class="my-4">
+    <p>The focus is to initiate culture of networking and learning through each other to bring about a qualitative change in the education system.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div> -->
+
+
+<form name="myform" id="myForm">
+Select Country: <select name="state" id="countySel" size="1">
+<option value="" selected="selected">Select Country</option>
+</select>
+<br>
+<br>
+  <hr>
+Select State: <select name="countrya" id="stateSel" size="1">
+<option value="" selected="selected">Please select Country first</option>
+</select>
+<br>
+<br>
+  <hr>
+Select District: <select name="district" id="districtSel" size="1">
+<option value="" selected="selected">Please select State first</option>
+</select><br><br>
+
+  <hr>
+
+School Name:
+  <input type="text" name="School Name" >
+  <br><br>
+School Code:
+  <input type="text" name="lastname" >
+  <br><br>
+Type of Management:
+  <select name="typeofManagement">
+    <option value="Government">Government</option>
+    <option value="Aided">Govenment Aided</option>
+    <option value="Private">Private</option>
+  </select>
+  <br><br>
+
+School Type under selected Management Government:
+  <select name="manageGovern">
+    <option value="Pre-Primary">Pre-Primary</option>
+    <option value="0-5">0-5</option>
+    <option value="1-5">1-5</option>
+    <option value="1-7">1-7</option>
+    <option value="1-8">1-8</option>
+    <option value="1-10">1-10</option>
+    <option value="1-12">1-12</option>
+    <option value="6-8">6-8</option>
+    <option value="6-10">6-10</option>
+    <option value="1-10">1-10</option>
+    <option value="6-12">6-12</option>
+    <option value="8-12">8-12</option>
+    <option value="9-12">9-12</option>
+    <option value="11-12">11-12</option>
+  </select>
+  <br><br>
+
+  School Type according to locality:
+  <select name="locality">
+    <option value="rural">Rural</option>
+    <option value="urban">Urban</option>
+  </select>
+  <br><br>
+
+  School Type according to Gender:
+  <select name="gender">
+    <option value="Girls">Girls</option>
+    <option value="boys">Boys</option>
+    <option value="co-ed">Co-ed</option>
+  </select>
+  <br><br>
+
+    <hr>
+
+  Student Name:
+  <input type="text" name="studentname" >
+  <br><br>
+Student Code:
+  <input type="text" name="code" >
+  <br><br>
+
+  Student Date of Birth:
+  <input type="date" name="dob" >
+  <br><br>
+
+   Student Date of Joining School:
+  <input type="date" name="datejoin" >
+  <br><br>
+
+ Student Gender:
+  <select name="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+  <br><br>
+
+  Student Category:
+  <select name="Category">
+    <option value="general">General</option>
+    <option value="st">ST</option>
+    <option value="sc">SC</option>
+    <option value="other">Other</option>
+  </select>
+  <br><br>
+
+  Class in which studying:
+  <select name="Category">
+    <option value="three">3</option>
+    <option value="five">5</option>
+    <option value="eight">8</option>
+    <option value="ten">10</option>
+  </select>
+  <br><br>
+Any other information specific to the Student (Special need/ Giftedness/etc.):
+<input type="text" name="otherinfo" >
+  <br><br>
+<hr>
+<br><br>
+  Teacher's Name:
+  <input type="text" name="teachername" >
+  <br><br>
+Teacher's Code:
+  <input type="text" name="tcode" >
+  <br><br>
+
+  Teacher's Date of Birth:
+  <input type="date" name="tdob" >
+  <br><br>
+
+   Teacher's Date of Joining School:
+  <input type="date" name="tdatejoin" >
+  <br><br>
+
+  Teacher's Qualification:
+  <select name="tqualificaiton">
+    <option value="Government">Graduate</option>
+    <option value="Aided">Post Graduate</option>
+    <option value="Other">Other</option>
+  </select>
+  <br><br>
+
+  Teacher Gender:
+  <select name="tgender">
+    <option value="tmale">Male</option>
+    <option value="tfemale">Female</option>
+    <option value="tother">Other</option>
+  </select>
+  <br><br>
+
+  Teacher Social Category:
+  <select name="tCategory">
+    <option value="tgeneral">General</option>
+    <option value="tst">ST</option>
+    <option value="tsc">SC</option>
+    <option value="tother">Other</option>
+  </select>
+  <br><br>
+
+  Teacher Employment Status:
+  <select name="empStatus">
+    <option value="perm">Permanent</option>
+    <option value="reg">Regular</option>
+    <option value="con">Contractual</option>
+    <option value="adhoc">Ad Hoc</option>
+    <option value="temp">Temporary</option>
+    <option value="ttother">Others</option>
+  </select>
+  <br><br>
+
+  Teaching Experience:
+  <select name="manageGovern">
+    <option value="1-2">1-2</option>
+    <option value="2-3">2-3</option>
+    <option value="3-4">3-4</option>
+    <option value="4-5">4-5</option>
+    <option value="5-6">5-6</option>
+    <option value="6-7">6-7</option>
+    <option value="7-8">7-8</option>
+    <option value="8-9">8-9</option>
+    <option value="9-10">9-10</option>
+    <option value="more10">more than 10</option>
+
+  </select>
+  <br><br>
+
+Teaching subjects in consonance with her/his qualification:
+  <select name="tconsononce">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+  <br><br>
+
+Classes taught (press ctl to select multiple)
+  <select multiple name="class_taught">
+    <option value="three">3</option>
+    <option value="five">5</option>
+     <option value="eight">8</option>
+      <option value="ten">10</option>
+  </select>
+  <br><br>
+
+Subjects taught (press ctl to select multiple):
+<select multiple name="subject_taught">
+    <option value="evs">EVS</option>
+    <option value="science">Science</option>
+    <option value="sst">SST</option>
+    <option value="maths">Maths</option>
+    <option value="language">language</option>
+  </select>
+  </select>
+  <br><br>
+
+  <hr>
+
+Select Class: <select name="classs" id="classSel" size="1">
+<option value="" selected="selected">Select Class</option>
+</select>
+<br>
+<br>
+
+Select Subject: <select name="subject" id="subjectSel" size="1">
+<option value="" selected="selected">Please select Class first</option>
+</select>
+<br>
+<br>
+
+Select Learning Outcome: <select name="learning" id="learningSel" size="1">
+<option value="" selected="selected">Please select Subject first</option>
+</select><br><br>
+
+  <hr>
+
+Assessment evidences:
+  <select name="assessmentevid">
+    <option value="port">Portfolio Assessment</option>
+    <option value="feed">Feedback</option>
+    <option value="rub">Rubric</option>
+    <option value="self">Self-Assessment</option>
+    
+  </select>
+  <br><br>
+
+  Type of resource to be submitted:
+  <select name="resourcesubmitted">
+    <option value="vid">Videos</option>
+    <option value="aud">Audio</option>
+    <option value="photo">Photographs</option>
+    <option value="doc">Document</option>
+    
+  </select>
+  <br><br>
+
+Title of the program:
+  <input type="text" name="titleprogram" >
+  <br><br>
+
+  Language of the program:
+  <input type="text" name="languageprogram" >
+  <br><br>
+
+  Duration of the program:
+  <input type="text" name="durationprogram" >
+  <br><br>
+
+  Licence of the program:
+  <input type="text" name="licenceprogram" >
+  <br><br>
+
+  Description of the program:
+  <input type="text" name="descriptionprogram" >
+  <br><br>
+
+  Keywords of the program:
+  <input type="text" name="keywordprogram" >
+  <br><br>
+
+  Source of the program:
+  <input type="text" name="sourceprogram" >
+  <br><br>
+
+  <input type="file" id="myFile">
+<br><br>
+
+<input type="submit" value="Submit Resource">
+ <br><br>
+Level/ Status of the Child in Terms of Achieving the LO:
+  <select name="levelofchild">
+    <option value="lo">LO achieved and can support others</option>
+    <option value="loach">LO achieved</option>
+    <option value="needsupport">Need support to achieve</option>
+    <option value="tbin">To be initiated</option>
+    
+  </select>
+ 
+
+  
+</form>
+</div>
+
+{%endblock%}

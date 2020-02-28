@@ -1,0 +1,30 @@
+{% extends 'lms/ncertuser/supportandsupervision.html'%}
+{% block support%}
+
+Please Select categories :<br>
+
+
+<input type="checkbox" name="vehicle1" value="Bike">State
+<input type="checkbox" name="vehicle2" value="Car"> District
+<input type="checkbox" name="vehicle3" value="Boat" checked> School
+<input type="checkbox" name="vehicle3" value="Boat" checked> Class
+
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter State Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter District Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter School Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter Class Name"><br>
+
+
+Please Select Performance : 
+<select>
+  <option>LO achieved and can support others</option>
+  <option>LO achieved</option>
+  <option>Need support to achieve</option>
+  <option>To be initiated</option>
+</select>
+<br><br>
+
+
+
+
+{% endblock %}

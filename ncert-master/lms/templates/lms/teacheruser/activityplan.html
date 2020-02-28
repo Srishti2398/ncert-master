@@ -1,0 +1,131 @@
+{%extends 'lms/base.html'%}
+{% load static%}
+{%block content%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img class = 'logo' src="{% static 'ncert/img/logo.png' %}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      {% if user.is_authenticated%}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'lowestlo' %}">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'activityP' %}">Activity Plan <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'slo' %}">Student Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'uploadEvi' %}">Upload Evidences <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'pr' %}">Progress Report <span class="sr-only">(current)</span></a>
+      </li>
+
+       <li class="nav-item active">
+        <a class="nav-link" href="{%url 'vcar'%}">View Content and Resource <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+
+      {% endif %}
+      
+  </div>
+
+
+</nav>
+
+
+<script src="{% static 'ncert/myjs/teacherjs.js' %}"></script>  
+<div class="container">
+
+ <!--  <div class="jumbotron">
+    <h1 class="display-4">Learning Management System</h1>
+    <p class="lead">NCERT has been conducting the National Achievement Survey (NAS) since 2001. This is the Largest Achievement survey conducted in the country and is amongst the largest conducted in the world. It is being implemented to assess the competency based Learning Outcomes of students at different stages of education.</p>
+    <hr class="my-4">
+    <p>The focus is to initiate culture of networking and learning through each other to bring about a qualitative change in the education system.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div> -->
+
+
+<form name="myform" id="myForm">
+
+
+Select Class: <select name="classs" id="classSel" size="1">
+<option value="" selected="selected">Select Class</option>
+</select>
+<br>
+<br>
+
+Select Subject: <select name="subject" id="subjectSel" size="1">
+<option value="" selected="selected">Please select Class first</option>
+</select>
+<br>
+<br>
+
+Select Learning Outcome: <select name="learning" id="learningSel" size="1">
+<option value="" selected="selected">Please select Subject first</option>
+</select><br><br>
+
+Activity Type:
+  <select name="atype">
+    <option value="tmale">Group Based</option>
+    <option value="tfemale">Description</option>
+    <option value="tother">Game Based</option>
+    <option value="tother">MCQ</option>
+    <option value="tother">Other</option>
+
+  </select>
+  <br><br>
+
+
+  Assesment Type:
+  <select name="asstype">
+    <option value="tmale">Portfolio</option>
+    <option value="tfemale">Feedback</option>
+    <option value="tother">Self</option>
+    <option value="tother">Rubric</option>
+  </select>
+  <br><br>
+
+ Activity Title:
+  <input type="text" name="tdob" >
+  <br><br>
+
+Activity Acronym:
+  <input type="text" name="tdob" >
+  <br><br>
+
+<button type="button" class="btn btn-secondary">Save</button>
+<button type="button" class="btn btn-secondary">Delete</button>
+<button type="button" class="btn btn-secondary">Search</button>
+<button type="button" class="btn btn-secondary">Upload Activity</button>
+<button type="button" class="btn btn-secondary">Document</button>
+<button type="button" class="btn btn-secondary">Print Activity Document</button>
+
+</div>
+
+{%endblock%}

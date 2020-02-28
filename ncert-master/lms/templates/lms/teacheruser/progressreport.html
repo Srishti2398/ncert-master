@@ -1,0 +1,82 @@
+{%extends 'lms/base.html'%}
+{% load static%}
+{%block content%}
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+  <!-- <a class="navbar-brand" href="#"><img class = 'logo' src="{% static 'ncert/img/logo.png' %}"></a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"> -->
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      {% if user.is_authenticated%}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'lowestlo' %}">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'activityP' %}">Activity Plan <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'slo' %}">Student Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'uploadEvi' %}">Upload Evidences <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'pr' %}">Progress Report <span class="sr-only">(current)</span></a>
+      </li>
+
+       <li class="nav-item active">
+        <a class="nav-link" href="{%url 'vcar'%}">View Content and Resource <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+
+      {% endif %}
+      
+  </div>
+
+
+</nav>
+
+
+Please select to show data:
+  <select name="tqualificaiton">
+    <option value="Class">Class wise</option>
+    <option value="Gender">Gender Wise</option>
+    <option value="CWSN">CWSN wise</option>
+    <option value="Social">Social group wise</option>
+  </select>
+  <br><br>
+
+
+
+Please select timeframe:
+  <select name="tqualificaiton">
+    <option value="Monthly">Monthly</option>
+    <option value="Weekly">Weekly</option>
+    <option value="Daily">Daily</option>
+  </select>
+  <br><br>
+
+
+{%endblock%}

@@ -1,0 +1,27 @@
+{% extends 'lms/ncertuser/resourcemanagement.html'%}
+{% block resource %}
+
+
+
+Type of Resource : 
+<select>
+  <option>Video</option>
+  <option>Audio</option>
+  <option>Document</option>
+  <option>Photo</option>
+</select>
+<br><br>
+
+
+<input type="file" name="pic" ><br>
+ <input type="submit"><br><br><br><br>
+
+<button type="button" class="btn btn-secondary">Add More Content</button>
+<button type="button" class="btn btn-secondary">Edit Content</button>
+<button type="button" class="btn btn-secondary">Upload Content </button>
+<button type="button" class="btn btn-secondary">Delete Content</button>
+<button type="button" class="btn btn-secondary">Filter Content</button><br><br>
+
+<button type="button" class="btn btn-secondary">Resource Library</button>
+
+{% endblock resource %}

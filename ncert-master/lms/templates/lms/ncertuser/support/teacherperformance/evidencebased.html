@@ -1,0 +1,404 @@
+{% extends 'lms/ncertuser/support/teacherperformance.html'%}
+{% block perform %}
+Please Select categories :<br>
+
+
+<!-- <input type="checkbox" name="vehicle1" value="State">State
+<input type="checkbox" name="vehicle2" value="District"> District
+<input type="checkbox" name="vehicle3" School="School" checked> School
+<input type="checkbox" name="vehicle3" value="Class" checked> Class
+
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter State Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter District Name">
+<input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter School Name"> -->
+<!-- <input type="text" class="form-control" id="exampleInputEmail1"placeholder="Enter Class Name"><br> -->
+
+Please Select Time Period : 
+<select>
+  <option>Weekly</option>
+  <option>15 days</option>
+  <option>Monthly</option>
+  <option>3 Months</option>
+</select>
+<br><br>
+
+Please Select Performance : 
+<select id = 'teacherperform'>
+  <option>latent</option>
+  <option>Emerging</option>
+  <option>Established</option>
+  <option>Advanced</option>
+</select>
+<br><br>
+
+<input type="button" onclick="showData()" value="Go">
+<div id = 'teacherdata'></div>
+
+<script>
+function showData(){
+  var sel = document.getElementById('teacherperform');
+  var data= '';
+  if(sel.value == 'latent'){
+    data = `<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name of Teacher</th>
+      <th scope="col">Name of School</th>
+      <th scope="col">Class Tought  </th>
+      <th scope="col">Numerical Grade </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Saumya Malhotra</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Muskan Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Nikhat Noor</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Bipasha Sharma</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Rohini Roy</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Maya Pandit</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+
+    
+  </tbody>
+</table>`;
+  }
+
+  if(sel.value == 'Emerging'){
+    data = `<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name of Teacher</th>
+      <th scope="col">Name of School</th>
+      <th scope="col">Class Tought  </th>
+      <th scope="col">Numerical Grade </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Diksha Rajput</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Vaishali Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Mohak Arya</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Babita Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Sadiya Suleman</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Sadaf Khan </td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">7</th>
+      <td>Pammi Dayal</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    
+  </tbody>
+</table>`;
+  }
+
+
+  if(sel.value == 'Established'){
+    data = `<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name of Teacher</th>
+      <th scope="col">Name of School</th>
+      <th scope="col">Class Tought  </th>
+      <th scope="col">Numerical Grade </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Sarthi Mishra</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Puru Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Jaya sharma</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Naseem Banu</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Sophia Joseph</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Sayan Shiv</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <th scope="row">7</th>
+      <td>Omkar Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">8</th>
+      <td>Usha Sharma</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    
+  </tbody>
+</table>`;
+  }
+
+  if(sel.value == 'Emerging'){
+    data = `<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name of Teacher</th>
+      <th scope="col">Name of School</th>
+      <th scope="col">Class Tought  </th>
+      <th scope="col">Numerical Grade </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Diksha Rajput</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Vaishali Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Mohak Arya</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Babita Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Sadiya Suleman</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Sadaf Khan </td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">7</th>
+      <td>Pammi Dayal</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+
+    
+  </tbody>
+</table>`;
+  }
+
+
+  if(sel.value == 'Advanced'){
+    data = `<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name of Teacher</th>
+      <th scope="col">Name of School</th>
+      <th scope="col">Class Tought  </th>
+      <th scope="col">Numerical Grade </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Shubra Singh</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Vijeta Verma</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Mayant Gupta</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Gursharan Kaur</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Bhagya Arora</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Jai Shankar</td>
+      <td>GG Senior Secondary School, Raichur</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+
+    
+    
+  </tbody>
+</table>`;
+  }
+  document.getElementById("teacherdata").innerHTML = data;
+
+}
+</script>
+{% endblock perform %}

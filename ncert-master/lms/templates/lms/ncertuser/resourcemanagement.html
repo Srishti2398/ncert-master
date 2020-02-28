@@ -1,0 +1,10 @@
+{% extends 'lms/ncertuser.html'%}
+{% block ncert%}
+
+<button type="button" onclick="window.location.href = '{% url 'newup'%}';" class="btn btn-secondary">New Upload</button>
+
+<button type="button" onclick="window.location.href = '{% url 'reviewup'%}';" class="btn btn-secondary">Review Uploads from State/UT</button><br><br>
+
+{% block resource %}
+{% endblock resource %}
+{% endblock %}

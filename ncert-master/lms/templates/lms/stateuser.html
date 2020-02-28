@@ -1,0 +1,71 @@
+{%extends 'lms/base.html'%}
+{% load static%}
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img class = 'logo' src="{% static 'ncert/img/logo.png' %}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      {% if user.is_authenticated%}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'stateuser' %}">Dashboard<span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'pr'%}">Progress Report<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'dm' %}">District Management<span class="sr-only">(current)</span></a>
+      </li>
+
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'rm' %}">Resource Management<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'statesas' %}">Support and Supervision<span class="sr-only">(current)</span></a>
+      </li>
+
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="{% url 'iau' %}">Information and Update<span class="sr-only">(current)</span></a>
+      </li> -->
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'feed' %}">Feedback<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li>
+      {% else %}
+
+       <li class="nav-item active">
+        <a class="nav-link" href="">login<span class="sr-only">(current)</span></a>
+      </li>
+      {% endif %}
+      
+  </div>
+</nav>
+{% block state %}
+{% endblock state%}
+<link rel="stylesheet" type="text/css" href="{% static 'ncert/mycss/myblink.css' %}">
+
+{% if content == 'stateuser' %}
+      <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Dashboard</h1>
+    <p class="lead blink">You have received Mail</p>
+  </div>
+</div>
+{% endif %}
+
+{%endblock%}

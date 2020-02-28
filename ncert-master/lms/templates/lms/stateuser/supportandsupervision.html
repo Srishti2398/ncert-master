@@ -1,0 +1,14 @@
+{% extends 'lms/stateuser.html'%}
+{% block state %}
+<button type="button" onclick="window.location.href = '{% url 'stateds'%}';"class="btn btn-secondary">District Support</button>
+
+<button type="button"  onclick="window.location.href = '{% url 'statetp'%}';" class="btn btn-secondary">Teacher Performance</button>
+<button type="button" onclick="window.location.href = '{% url 'statets'%}';"class="btn btn-secondary">Teacher Support</button> 
+<button type="button" onclick="window.location.href = '{% url 'statesp'%}';"class="btn btn-secondary">Student Performance</button> 
+<button type="button" onclick="window.location.href = '{% url 'statess'%}';"class="btn btn-secondary">Student Support</button> 
+<button type="button" onclick="window.location.href = '{% url 'iau'%}';"class="btn btn-secondary">Information and Update</button> <br>
+
+{% block support%}
+{% endblock support%}
+
+{% endblock state%}

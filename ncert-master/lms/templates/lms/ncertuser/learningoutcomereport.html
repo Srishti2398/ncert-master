@@ -1,0 +1,496 @@
+{% extends 'lms/ncertuser.html'%}
+{% load static %}
+{% block ncert%}
+
+Please Enter Your Choice : 
+<select>
+  <option>National Report</option>
+  <option>State Report</option>
+  <option>District Report</option>
+  <option>School Report</option>
+  <option>Student Report</option>
+</select>
+<br><br>
+Please Enter Time : 
+<select>
+  <option>Monthly</option>
+  <option>Weekly</option>
+  <option>Daily</option>
+</select>
+
+<br><br>
+<!-- Please Enter Evidence Type : 
+<select>
+  <option>Peer Assessment</option>
+  <option>Portfolio Assessment</option>
+  <option>Self Assessment</option>
+  <option>Rubric Assessment</option>
+  <option>Feedback Assessment</option>
+  <option>MCQ</option> 
+
+  
+</select> -->
+<div class="maincontrolbox">
+ 
+ 
+ Please Enter Class:
+  <select class="dropdown" name="state" id="state">
+
+
+      <option value="Not Specified" selected>Choose...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+
+  </select>
+<br>
+Please Enter Subject:
+  <select class="dropdown" name="1" id="1">
+
+
+      <option value="Not Specified" selected>Choose...</option>
+      <option value="Sub 1">Sub 1</option>
+      <option value="Sub 2">Sub 2</option>
+      <option value="Sub 3">Sub 3</option>
+
+
+  </select>
+  <select class="dropdown" name="2" id="2">
+
+
+    <option value="Not Specified" selected>Choose...</option>
+    <option value="Sub 1">Sub 1</option>
+    <option value="Sub 2">Sub 2</option>
+    <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+<select class="dropdown" name="3" id="3">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+<select class="dropdown" name="4" id="4">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+
+<select class="dropdown" name="5" id="5">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+<select class="dropdown" name="6" id="6">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+<select class="dropdown" name="7" id="7">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+<select class="dropdown" name="8" id="8">
+
+
+  <option value="Not Specified" selected>Choose...</option>
+  <option value="Sub 1">Sub 1</option>
+  <option value="Sub 2">Sub 2</option>
+  <option value="Sub 3">Sub 3</option>
+
+
+</select>
+
+  <select class="dropdown" name="9" id="9">
+
+
+    <option value="Not Specified" selected>Choose...</option>
+    <option value="Sub 1">Sub 1</option>
+    <option value="Sub 2">Sub 2</option>
+    <option value="Sub 3">Sub 3</option>
+    <option value="Sub 4">Sub 4</option>
+    <option value="Sub 5">Sub 5</option>
+
+  </select>
+
+  <select class="dropdown" name="10" id="10">
+
+
+    <option value="Not Specified" selected>Choose...</option>
+    <option value="Sub 1">Sub 1</option>
+    <option value="Sub 2">Sub 2</option>
+    <option value="Sub 3">Sub 3</option>
+    <option value="Sub 4">Sub 4</option>
+    <option value="Sub 5">Sub 5</option>
+
+  </select>
+
+  <select class="dropdown" name="11" id="11">
+
+
+    <option value="Not Specified" selected>Choose...</option>
+    <option value="Sub 1">Sub 1</option>
+    <option value="Sub 2">Sub 2</option>
+    <option value="Sub 3">Sub 3</option>
+    <option value="Sub 4">Sub 4</option>
+    <option value="Sub 5">Sub 5</option>
+
+  </select>
+  <select class="dropdown" name="12" id="12">
+
+
+    <option value="Not Specified" selected>Choose...</option>
+    <option value="Sub 1">Sub 1</option>
+    <option value="Sub 2">Sub 2</option>
+    <option value="Sub 3">Sub 3</option>
+    <option value="Sub 4">Sub 4</option>
+    <option value="Sub 5">Sub 5</option>
+
+  </select>
+
+ <br>
+
+ Learning Outcome:
+  <select>
+  <option>E301: identifies simple features (e.g. movement, at places found/ kept, eating habits, sounds) of animals and birds in the immediate surroundings.</option>
+  <option>
+    E302: identifies relationships with and among family members
+    </option>
+  <option>
+    E303: identifies objects, signs (vessels, stoves, transport, means of communication, transport, sign boards etc.), places (types of houses/shelters, bus stand, petrol pump etc.) activities (works people do, cooking processes, etc.) at home/school/ neighbourhood
+    </option>
+  <option>
+    E304: Describes need of food for people of different age groups, animals/birds, availability of food and water and use of water at home and surroundings
+    </option>
+  <option>
+    E305: groups objects, birds, animals, features, activities according to differences/similarities using different senses. (e.g. appearance/place of living/ food/ movement/ likes-dislikes/ any other features)
+    </option>
+  <option>
+    E306: identifies directions, location of objects/places in simple maps using signs/symbols/verbally
+    </option>
+  <option>
+    E307: guesses properties, estimates quantities of materials/activities in daily life and verifies using symbols/non-standard units.
+    </option>
+  <option>
+    E308: Records observations, experiences, information on objects/activities/places visited in different ways and predicts patterns etc.
+    </option>
+  <option>
+    E309: observes rules in games (local. indoor, outdoor)
+    </option>
+  <option>
+    E310: voices opinion on good/bad touch, stereotypes for tasks/play/food in family w.r.t gender, misuse/wastage of food and water in family and school.
+    </option>
+  </select>
+  
+
+
+  <input type="button" onclick="displayImage()" value="Go">
+
+  <img id="bigpic" src="{% static 'ncert/img/analysis/analysis1.png' %}" style="display:none;"/>
+
+  <div id="resultbox"></div>
+</div>
+
+
+
+<script>
+
+function displayImage() {
+  document.getElementById('bigpic').style.display='block';
+}
+
+  // to test if one string contains another string ..
+  $(document).ready(function(){
+
+
+      // note the jquery version change ... switch it to .on('change',
+      // remember that in newer versions of jquery the method below should be
+      // $("#state").on('change', function (){  ... but other than that
+      // the two ways ARE EXACTLY THE SAME ...watch my video carefully and
+      // you'll see what i'm referring to ..
+      $("#state").change(function (){
+
+          var chosenstate = $("#state").val();
+//            alert(chosenstate);
+
+          if(chosenstate == "1"){
+
+              $("#1").css("display", "block");
+              $("#2").css("display", "none");
+              $("#3").css("display", "none");
+              $("#4").css("display", "none");
+              $("#5").css("display", "none");
+              $("#6").css("display", "none");
+              $("#7").css("display", "none");
+              $("#8").css("display", "none");
+              $("#9").css("display", "none");
+              $("#10").css("display", "none");
+              $("#11").css("display", "none");
+              $("#12").css("display", "none");
+
+          }
+
+          if(chosenstate == "2"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "block");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "3"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "block");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+
+if(chosenstate == "4"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "block");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "5"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "block");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "6"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "block");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "7"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "block");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+
+if(chosenstate == "8"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "block");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+
+if(chosenstate == "9"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "block");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "10"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "block");
+$("#11").css("display", "none");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "11"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "block");
+$("#12").css("display", "none");
+
+}
+
+if(chosenstate == "12"){
+
+$("#1").css("display", "none");
+$("#2").css("display", "none");
+$("#3").css("display", "none");
+$("#4").css("display", "none");
+$("#5").css("display", "none");
+$("#6").css("display", "none");
+$("#7").css("display", "none");
+$("#8").css("display", "none");
+$("#9").css("display", "none");
+$("#10").css("display", "none");
+$("#11").css("display", "none");
+$("#12").css("display", "block");
+
+}
+
+
+
+      // ...end dropdown "change" event handler
+      });
+
+
+
+
+
+
+
+      $("#execute").click(function(){
+
+          $("#resultbox").text(result);
+
+
+          // ...end button execute clickevent handler
+      });
+
+
+      // ...end document ready function
+  });
+
+
+
+
+</script>
+
+
+
+
+
+{%endblock%}

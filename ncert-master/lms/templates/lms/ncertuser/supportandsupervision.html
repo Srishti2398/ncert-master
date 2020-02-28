@@ -1,0 +1,14 @@
+{% extends 'lms/ncertuser.html'%}
+{% block ncert%}
+
+<button type="button"  onclick="window.location.href = '{% url 'tp'%}';" class="btn btn-secondary">Teacher Performance</button>
+<button type="button" onclick="window.location.href = '{% url 'ts'%}';"class="btn btn-secondary">Teacher Support</button><br>
+
+<!-- <button type="button" onclick="window.location.href = '{% url 'sp'%}';"class="btn btn-secondary">Student Performance</button> -->
+<!-- <button type="button" onclick="window.location.href = '{% url 'ss'%}';"class="btn btn-secondary">Student Support</button><br> -->
+
+
+{% block support%}
+{% endblock %}
+
+{% endblock %}

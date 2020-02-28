@@ -1,0 +1,220 @@
+{% extends 'lms/ncertuser/supportandsupervision.html'%}
+{% block support%}
+Select State:
+<select id="state">
+  <option>Andhra Pradesh</option>
+  <option>Arunachal Pradesh</option>
+  <option>Asaam</option>
+  <option>Karnataka</option>
+</select>
+<br><br>
+Select District
+<select id="district">
+    <option>Raichur</option>
+    <option>Chikkamagaluru </option>
+    <option>Davanagere </option>
+    <option>Dharwad</option>
+  </select>
+<br><br>
+Select Teacher Performance:
+<select id = 'teacherperform'>
+    <option>Latent</option>
+    <option>Emerging </option>
+  </select>
+<br><br>
+<input type="button" onclick="showData()" value="Go"><br><br>
+
+<div id = 'teacherdata'></div>
+<div>
+Select Teacher:
+<input type="text">
+<br><br>
+Onsite: 
+<select>
+  <!-- <option></option> -->
+  <option>Field Visit</option>
+  <option>Demo Session</option>
+  <!-- <option>3 Months</option> -->
+</select>
+<br><br>
+
+Face to Face: 
+<select>
+  <option>Training</option>
+  <option>Demonstration</option>
+  <option>Workshop</option>
+  <!-- <option>Video</option> -->
+  <!-- <option>Document</option> -->
+</select>
+<br><br>
+
+
+Online: 
+<select>
+  <option>Audio</option>
+  <option>Video</option>
+  <option>Document</option>
+</select>
+<br><br>
+
+
+<button type="button" class=">Upload</button>
+<button type="button" class="">Add</button>
+<button type="button" class="">Edit </button>
+<button type="button" class="">Delete</button>
+<button type="button" class="">Browse</button>
+
+</div>
+<script>
+    function showData(){
+      var perform = document.getElementById('teacherperform');
+      var state = document.getElementById('state');
+      var district = document.getElementById('district');
+      var data= '';
+      var check = (state.value == 'Karnataka') && (district.value == 'Raichur');
+      if(perform.value == 'Latent' && check){
+        data = `<table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name of Teacher</th>
+          <th scope="col">Name of School</th>
+          <th scope="col">Class Tought  </th>
+          <th scope="col">Numerical Grade </th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Saumya Malhotra</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Muskan Singh</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">3</th>
+          <td>Nikhat Noor</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>5</td>
+          <td>1</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">4</th>
+          <td>Bipasha Sharma</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">5</th>
+          <td>Rohini Roy</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">6</th>
+          <td>Maya Pandit</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+    
+        
+      </tbody>
+    </table>`;
+      }
+    
+      if(perform.value == 'Emerging' && check){
+        data = `<table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name of Teacher</th>
+          <th scope="col">Name of School</th>
+          <th scope="col">Class Tought  </th>
+          <th scope="col">Numerical Grade </th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Diksha Rajput</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Vaishali Singh</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">3</th>
+          <td>Mohak Arya</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>5</td>
+          <td>2</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">4</th>
+          <td>Babita Singh</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">5</th>
+          <td>Sadiya Suleman</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">6</th>
+          <td>Sadaf Khan </td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>5</td>
+          <td>2</td>
+        </tr>
+    
+        <tr>
+          <th scope="row">7</th>
+          <td>Pammi Dayal</td>
+          <td>GG Senior Secondary School, Raichur</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+    
+        
+      </tbody>
+    </table>`;
+      }
+    
+  
+      document.getElementById("teacherdata").innerHTML = data;
+    
+    }
+    </script>
+
+
+{% endblock %}
